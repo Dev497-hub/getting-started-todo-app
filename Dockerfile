@@ -88,5 +88,5 @@ RUN --mount=type=cache,id=yarn,target=/usr/local/share/.cache/yarn \
     yarn install --production --frozen-lockfile
 COPY backend/src ./src
 COPY --from=client-build /usr/local/app/dist ./src/static
-EXPOSE 3001
+EXPOSE 3000
 CMD ["node", "src/index.js"]
